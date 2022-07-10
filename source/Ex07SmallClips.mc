@@ -3,7 +3,7 @@ import Toybox.Lang;
 import Toybox.System;
 import Toybox.WatchUi;
 
-class Ex06QuaterBitmapClip extends WatchUi.WatchFace {
+class Ex07SmallClips extends WatchUi.WatchFace {
     private var _buffer as BufferedBitmapReference?;
 
     function initialize() {
@@ -24,13 +24,12 @@ class Ex06QuaterBitmapClip extends WatchUi.WatchFace {
     function onPartialUpdate(dc as Dc) {
         var buffer = self._buffer;
         if (buffer != null) {
-            dc.setClip(
-                dc.getWidth() / 2,
-                0,
-                dc.getWidth() / 2,
-                dc.getHeight() / 2
-            );
-            dc.drawBitmap(dc.getWidth() / 2, 0, buffer);
+            dc.setClip(0, 0, 50, 50);
+            dc.drawBitmap(0, 0, buffer);
+            dc.setClip(50, 50, 50, 50);
+            dc.drawBitmap(0, 0, buffer);
+            dc.setClip(100, 100, 50, 50);
+            dc.drawBitmap(0, 0, buffer);
         }
     }
 }

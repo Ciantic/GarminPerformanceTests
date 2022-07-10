@@ -68,3 +68,12 @@ Total time: 28364 \
 Execution time: 1224 \
 Graphics time: 100 \
 Display time: 27040
+
+## 7. Drawing small rectangles (smaller than quarter of screen) from full bitmap with setClip
+
+`Ex07SmallClips` another finding, re-drawing a same buffer with different clips is total waste. This is slower than drawing half of the screen!
+
+Total time: 33974 \
+Execution time: 2624 \
+Graphics time: 150 \
+Display time: 31200

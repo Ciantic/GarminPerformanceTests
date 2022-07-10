@@ -16,7 +16,7 @@ class App extends Application.AppBase {
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
         return (
-            [new Ex06QuaterBitmapClip(), new WatchDelegate()] as
+            [new Ex07SmallClips(), new WatchDelegate()] as
             Array<Views or InputDelegates>
         );
     }
