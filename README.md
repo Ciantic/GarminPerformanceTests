@@ -1,6 +1,10 @@
 # Performance notes of Garmin drawing routines
 
-All tests ran in simulator with FR955
+All tests ran in simulator with FR955, and low power mode with Watch face diagnostics.
+
+Notably Profiler is useless, it won't give even remotely same numbers. Only the watch face diagnostics screen gives accurate numbers when it comes to `onPowerBudgetExceeded` limitations.
+
+Tested with IQ 4.1.4 SDK.
 
 ## 1. Drawing full bitmap from BufferedBitmapReference:
 
