@@ -109,6 +109,13 @@ Display time: **54080**
 <img src="./04-quarter.jpg" height="250" />
 
 ```javascript
+// onLayout
+var buffer = Graphics.createBufferedBitmap({
+    :width => dc.getWidth() / 2,
+    :height => dc.getHeight() / 2,
+})
+
+// onPartialUpdate
 dc.setClip(dc.getWidth() / 2, 0, dc.getWidth() / 2, dc.getHeight() / 2);
 dc.drawBitmap(dc.getWidth() / 2, 0, buffer);
 ```
