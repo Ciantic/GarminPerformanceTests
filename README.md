@@ -33,6 +33,22 @@ Execution time: **1062** \
 Graphics time: **100** \
 Display time: **27040**
 
+## 2. (B) Drawing right half of bitmap BufferedBitmapReference with setClip
+
+Example view: `Ex02HalfBitmapDrawClip02`, this is where it gets confusing. Drawing right half takes as long as drawing whole screen!
+
+<img src="./02-halfscreen-right.jpg" height="250" />
+
+```javascript
+dc.setClip(dc.getWidth() / 2, 0, dc.getWidth() / 2, dc.getHeight());
+dc.drawBitmap(0, 0, buffer);
+```
+
+Total time: **55398** \
+Execution time: **1137** \
+Graphics time: **181** \
+Display time: **54080**
+
 ## 3. Drawing half of bitmap BufferedBitmapReference with drawOffsetBitmap
 
 `Ex03HalfBitmapDrawOffset` notably, this renders exactly same screen as 2. but is very slow! First finding! Never use `drawOffsetBitmap`, instead use `setClip` like in previous.
