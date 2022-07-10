@@ -13,8 +13,8 @@ class Ex06QuaterBitmapClip extends WatchUi.WatchFace {
     // Load your resources here
     function onLayout(dc as Dc) as Void {
         self._buffer = Graphics.createBufferedBitmap({
-            :width => dc.getWidth(),
-            :height => dc.getHeight(),
+            :width => dc.getWidth() / 2,
+            :height => dc.getHeight() / 2,
         });
         var bdc = (self._buffer.get() as BufferedBitmap).getDc();
         bdc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLUE);
